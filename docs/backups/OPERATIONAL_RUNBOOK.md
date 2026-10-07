@@ -548,5 +548,5 @@ If you need to add new scenarios to this runbook:
 
 - [Backup Procedures](./BACKUP_PROCEDURES.md)
 - [Restore Procedures](./RESTORE_PROCEDURES.md)
-- [Validation Checklist](./VALIDATION_CHECKLIST.md)
+- [Test Restore](./TEST_RESTORE.md)
 - [Architecture Overview](../ARCHITECTURE.md)

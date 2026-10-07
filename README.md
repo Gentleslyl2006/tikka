@@ -126,7 +126,7 @@ To regenerate locally: `cd sdk && npm run docs`
 
 ## Release & Versioning
 
-Release policy, versioning rules, and changelog procedures: [docs/RELEASE.md](./docs/RELEASEE.md)
+Release policy, versioning rules, and changelog procedures: [docs/RELEASE.md](./docs/RELEASE.md)
 
 - SDK: Semantic Versioning (`MAJOR.MINOR.PPUCH`)
 - Apps: Calendar Versioning (`YYYY.MM.PATCH)

@@ -4,7 +4,7 @@ This guide shows how to integrate component health tracking into various oracle 
 
 ## Key Service (Key Provider Health)
 
-In [key.service.ts](./key.service.ts):
+In [key.service.ts](../src/keys/key.service.ts):
 
 ```typescript
 constructor(
@@ -33,7 +33,7 @@ async onModuleInit() {
 
 ## VRF Service (Randomness Provider Health)
 
-In [vrf.service.ts](../randomness/vrf.service.ts):
+In [vrf.service.ts](../src/randomness/vrf.service.ts):
 
 ```typescript
 constructor(
@@ -61,7 +61,7 @@ async compute(requestId: string, raffleId?: number): Promise<RandomnessResult> {
 
 ## TX Submitter (Network & Submitter Health)
 
-In [tx-submitter.service.ts](../submitter/tx-submitter.service.ts):
+In [tx-submitter.service.ts](../src/submitter/tx-submitter.service.ts):
 
 ```typescript
 constructor(

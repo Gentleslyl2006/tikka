@@ -254,4 +254,4 @@ After completing setup:
 4. ✅ Browse demo raffles
 5. ✅ Test creating a raffle (demo mode)
 
-For contract deployment and blockchain integration, see [DEVELOPMENT.md](../DEVELOPMENT.md#contract-deployment).
+For contract deployment and blockchain integration, see [DEVELOPMENT.md](./DEVELOPMENT.md#contract-deployment).

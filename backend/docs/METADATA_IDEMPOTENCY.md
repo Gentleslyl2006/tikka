@@ -132,4 +132,4 @@ See `raffles.controller.spec.ts` for test implementation.
 
 - [Idempotency Interceptor](../src/common/idempotency/idempotency.interceptor.ts)
 - [Idempotency Service](../src/common/idempotency/idempotency.service.ts)
-- [ENV_VARS.md](../src/config/ENV_VARS.md) - Redis configuration
+- [Environment variables](../../docs/backend/ENV_VARS.md) - Redis configuration

@@ -9,12 +9,12 @@ Code lives in [`oracle/src/multi-oracle`](.):
 
 | File | Responsibility |
 |------|----------------|
-| [`oracle-registry.service.ts`](./oracle-registry.service.ts) | Who the oracles/peers are, threshold, audit log |
-| [`multi-oracle-coordinator.service.ts`](./multi-oracle-coordinator.service.ts) | Collecting peer responses and computing the aggregate |
-| [`multi-oracle.types.ts`](./multi-oracle.types.ts) | Shared types |
+| [`oracle-registry.service.ts`](../src/multi-oracle/oracle-registry.service.ts) | Who the oracles/peers are, threshold, audit log |
+| [`multi-oracle-coordinator.service.ts`](../src/multi-oracle/multi-oracle-coordinator.service.ts) | Collecting peer responses and computing the aggregate |
+| [`multi-oracle.types.ts`](../src/multi-oracle/multi-oracle.types.ts) | Shared types |
 
 > For the broader architecture and the on-chain (Soroban) side, see
-> [`oracle/MULTI_ORACLE.md`](../../MULTI_ORACLE.md). This file focuses narrowly on
+> [`oracle/MULTI_ORACLE.md`](./MULTI_ORACLE.md). This file focuses narrowly on
 > the quorum rules the coordinator enforces.
 
 ---
@@ -201,8 +201,8 @@ missing or disabled.
 ## 6. Tested scenarios
 
 The acceptance scenarios are covered in
-[`multi-oracle-coordinator.service.spec.ts`](./multi-oracle-coordinator.service.spec.ts)
-and [`oracle-registry.service.spec.ts`](./oracle-registry.service.spec.ts):
+[`multi-oracle-coordinator.service.spec.ts`](../src/multi-oracle/multi-oracle-coordinator.service.spec.ts)
+and [`oracle-registry.service.spec.ts`](../src/multi-oracle/oracle-registry.service.spec.ts):
 
 - **Quorum success** — responders ≥ `T`, deterministic XOR aggregate, `fellBack: false`.
 - **Insufficient quorum** — responders < `T`, local-only fallback, `fellBack: true`.

@@ -304,7 +304,7 @@ Before marking a Stellar Wave issue as ready for review, verify:
 - [ ] All universal requirements above satisfied
 - [ ] Package-specific expectations met
 - [ ] CI pipeline green (all workflows pass)
-- [ ] Code review checklist completed (see [CODE_REVIEW.md](./CODE_REVIEW.md) if exists)
+- [ ] Code review checklist completed (see the [Contributor Guide](./CONTRIBUTOR_GUIDE.md))
 - [ ] No TODOs or FIXMEs left in code
 - [ ] Related GitHub issues or PRs linked
 - [ ] Changelog entry added (if applicable)
@@ -355,4 +355,4 @@ Stellar Wave issues drive quality elevation across the ecosystem. Let's maintain
 
 **Last Updated:** 2026-05-29  
 **Maintained By:** Tikka Quality Team  
-**Related:** [ARCHITECTURE.md](../ARCHITECTURE.md) | [CI Workflows](.github/workflows/)
+**Related:** [ARCHITECTURE.md](../ARCHITECTURE.md) | [CI Workflows](../../.github/workflows/)

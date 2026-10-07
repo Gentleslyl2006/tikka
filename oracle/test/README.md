@@ -305,8 +305,8 @@ docker run -d -p 8001:8000 --name stellar \
 
 ## Resources
 
-- [E2E Test Guide](../E2E_TEST_GUIDE.md) - Comprehensive testing documentation
+- [E2E Test Guide](../docs/E2E_TEST_GUIDE.md) - Comprehensive testing documentation
 - [Oracle README](../README.md) - Oracle architecture and setup
-- [Manual Test Guide](../MANUAL_TEST_GUIDE.md) - Manual testing procedures
+- [Manual Test Guide](../docs/MANUAL_TEST_GUIDE.md) - Manual testing procedures
 - [Stellar Quickstart](https://github.com/stellar/quickstart) - Standalone node docs
 - [Soroban RPC](https://soroban.stellar.org/docs/reference/rpc) - RPC API reference

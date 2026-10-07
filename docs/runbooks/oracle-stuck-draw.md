@@ -199,5 +199,5 @@ If the draw could not be resolved immediately and users are waiting, communicate
 - **Rescue detector logic**: [rescue-detector.service.ts](../../oracle/src/rescue/rescue-detector.service.ts)
 - **Stuck draw types**: [stuck-draw.types.ts](../../oracle/src/rescue/stuck-draw.types.ts)
 - **Prometheus alert rules**: [alerts.rules.yml](../observability/alerts.rules.yml)
-- **On-call troubleshooting**: [ON_CALL_TROUBLESHOOTING.md](../../oracle/ON_CALL_TROUBLESHOOTING.md)
-- **Priority queue reference**: [PRIORITY_QUEUE_QUICK_REF.md](../../oracle/PRIORITY_QUEUE_QUICK_REF.md)
+- **On-call troubleshooting**: [ON_CALL_TROUBLESHOOTING.md](../../oracle/docs/ON_CALL_TROUBLESHOOTING.md)
+- **Priority queue reference**: [PRIORITY_QUEUE_QUICK_REF.md](../../oracle/docs/PRIORITY_QUEUE_QUICK_REF.md)

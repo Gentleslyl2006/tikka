@@ -342,7 +342,7 @@ For low-stakes raffles, ensure PRNG is used to avoid unnecessary VRF costs.
 ## References
 
 - [Dynamic Fee Estimation](./DYNAMIC_FEES.md)
-- [Oracle Architecture](../docs/ARCHITECTURE.md)
+- [Oracle Architecture](../../docs/ARCHITECTURE.md)
 - [Stellar Fee Documentation](https://developers.stellar.org/docs/data/apis/rpc/api-reference/methods/getFeeStats)
 
 ## Future Enhancements

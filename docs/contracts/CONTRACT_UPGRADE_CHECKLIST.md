@@ -244,13 +244,13 @@ The oracle listens for randomness requests and submits randomness.
 
 ---
 
-## Phase 4: Backend Updates
+## Phase 4: Backend / SDK Updates
 
 The backend provides REST API and handles metadata.
 
-### 4.1: Contract Config
+### 4.1: SDK Contract Configuration
 
-- [ ] **Update backend contract configuration** in [`backend/src/contract/`](../../backend/src/contract/):
+- [ ] **Update contract configuration** in [`sdk/src/contract/`](../../sdk/src/contract/):
   - [ ] Contract ID updated (via env var or config)
   - [ ] Contract method names reflect new bindings
   - [ ] Handles new contract response types

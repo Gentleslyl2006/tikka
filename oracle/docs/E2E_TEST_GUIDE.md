@@ -415,8 +415,8 @@ jobs:
 
 ## References
 
-- [Oracle Architecture](./docs/ARCHITECTURE.md)
+- [Oracle Architecture](../../docs/ARCHITECTURE.md)
 - [Manual Test Guide](./MANUAL_TEST_GUIDE.md)
-- [Rescue Guide](./RESCUE_GUIDE.md)
+- [Rescue Guide](../README.md#manual-rescue-tool)
 - [Stellar Quickstart](https://github.com/stellar/quickstart)
 - [Soroban RPC](https://soroban.stellar.org/docs/reference/rpc)

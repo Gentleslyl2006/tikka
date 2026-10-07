@@ -41,7 +41,7 @@ LIMIT :limit
 - ✅ `idx_raffles_creator` - For creator filter
 - ✅ `idx_raffles_status` - For status filter
 
-**Migration**: [1785000000000-AddPaginationIndexes.ts](./migrations/1785000000000-AddPaginationIndexes.ts)
+**Migration**: [1785000000000-AddPaginationIndexes.ts](../src/database/migrations/1785000000000-AddPaginationIndexes.ts)
 
 **Performance Impact**:
 - **Before**: Deep offset queries scan O(n) rows; index scans O(log n)
@@ -71,7 +71,7 @@ Tickets Mode: (totalTicketsBought DESC as primary, rest same)
 - ✅ `IDX_USERS_TOTAL_PRIZE_XLM_NUMERIC_ADDRESS` - For volume mode
 - ✅ `IDX_USERS_TOTAL_TICKETS_BOUGHT_ADDRESS` - For tickets mode
 
-**Migration**: [1770000000000-AuditHotPathIndexes.ts](./migrations/1770000000000-AuditHotPathIndexes.ts)
+**Migration**: [1770000000001-AuditHotPathIndexes.ts](../src/database/migrations/1770000000001-AuditHotPathIndexes.ts)
 
 **Index Optimization Notes**:
 - All indexes include address ASC as final tie-breaker (lexicographic ordering)
@@ -97,7 +97,7 @@ OFFSET :offset
 - ✅ `idx_tickets_raffle_id_purchased_at_ledger` - Covers raffle filter + sort order
 - ✅ `idx_tickets_owner_raffle_id` - For owner lookups
 
-**Migration**: [1785000000000-AddPaginationIndexes.ts](./migrations/1785000000000-AddPaginationIndexes.ts)
+**Migration**: [1785000000000-AddPaginationIndexes.ts](../src/database/migrations/1785000000000-AddPaginationIndexes.ts)
 
 **Performance Impact**:
 - Reduces full table scan to index scan

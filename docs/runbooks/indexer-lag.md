@@ -17,7 +17,7 @@ Existing Grafana panels already chart `tikka_indexer_lag_ledgers` (see `indexer/
 
 - **Alert**: `indexer_lag_alert` triggers when lag exceeds the threshold (default: 50 ledgers).
 - **Health Endpoint**: `GET /health` returns `lagStatus: 'critical'` or `degraded`.
-- **Dashboard**: Check the "Indexer Lag" panel in the [Indexer Grafana Dashboard](../../indexer/grafana/indexer-dashboard.json).
+- **Dashboard**: Check the "Indexer Lag" panel in the [Indexer Grafana Dashboard](../observability/indexer-dashboard.json).
 - **CLI**: Run the status command from `indexer/`. A one-shot check prints a
   status report and exits non-zero when a dependency is down or another
   actionable warning is present:

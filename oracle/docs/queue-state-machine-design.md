@@ -426,8 +426,8 @@ Potential improvements:
 ## References
 
 - [Bull Queue Documentation](https://github.com/OptimalBits/bull)
-- [Priority Queue Implementation](./PRIORITY_QUEUE_SUMMARY.md)
-- [Rescue Guide](./RESCUE_GUIDE.md)
+- [Priority Queue Implementation](./archive/PRIORITY_QUEUE_SUMMARY.md)
+- [Rescue Guide](../README.md#manual-rescue-tool)
 - [Multi-Oracle Coordination](./MULTI_ORACLE.md)
 
 ## Summary

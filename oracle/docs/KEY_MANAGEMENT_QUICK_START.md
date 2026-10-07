@@ -67,5 +67,5 @@ KeyService initialized with [provider-type] provider for address: G...
 ## See Also
 
 - [Full Documentation](./KEY_MANAGEMENT.md)
-- [IAM Policy Examples](./KEY_MANAGEMENT.md#configure-iam-policy)
+- [IAM Policy Examples](./KEY_MANAGEMENT.md#3-configure-iam-policy)
 - [Kubernetes Deployment](./KEY_MANAGEMENT.md#kubernetes-deployment)

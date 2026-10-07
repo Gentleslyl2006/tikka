@@ -368,7 +368,7 @@ GCP_KEY_ID=oracle-signing-key
 - 📖 [Key Management Guide](./docs/KEY_MANAGEMENT.md) - Comprehensive setup and configuration
 - 🚀 [Quick Start](./docs/KEY_MANAGEMENT_QUICK_START.md) - Get started in 5 minutes
 - 🔄 [Migration Guide](./docs/MIGRATION_TO_HSM.md) - Migrate from env vars to HSM
-- 📋 [Implementation Summary](./docs/HSM_IMPLEMENTATION_SUMMARY.md) - Technical details
+- 📋 [Implementation Summary](./docs/archive/HSM_IMPLEMENTATION_SUMMARY.md) - Technical details
 
 ### Benefits
 

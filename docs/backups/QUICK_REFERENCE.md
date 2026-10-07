@@ -213,7 +213,7 @@ source backup.env
 | `README.md` | Overview and quick start |
 | `BACKUP_PROCEDURES.md` | Detailed backup methods and setup |
 | `RESTORE_PROCEDURES.md` | Step-by-step restore procedures |
-| `VALIDATION_CHECKLIST.md` | Post-restore validation |
+| `TEST_RESTORE.md` | Verify backups can be restored |
 | `OPERATIONAL_RUNBOOK.md` | Incident response and troubleshooting |
 | `tikka-backup.sh` | Backup automation script |
 | `tikka-restore.sh` | Restore automation script |
@@ -234,7 +234,7 @@ source backup.env
 - [Full Documentation](./README.md)
 - [Backup Setup](./BACKUP_PROCEDURES.md#automated-backup-scheduling)
 - [Restore Guide](./RESTORE_PROCEDURES.md)
-- [Validation Steps](./VALIDATION_CHECKLIST.md)
+- [Test Restore](./TEST_RESTORE.md)
 - [Incident Response](./OPERATIONAL_RUNBOOK.md)
 
 ---

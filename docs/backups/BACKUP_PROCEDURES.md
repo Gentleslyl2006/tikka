@@ -658,5 +658,5 @@ pg_dump -Fc --jobs=1 --file=backup.dump "$DATABASE_URL"
 
 1. **Backup Procedures:** Review this document and test all backup scripts in your environment
 2. **Restore Plan:** See [RESTORE_PROCEDURES.md](./RESTORE_PROCEDURES.md)
-3. **Validation:** See [VALIDATION_CHECKLIST.md](./VALIDATION_CHECKLIST.md)
+3. **Validation:** See [TEST_RESTORE.md](./TEST_RESTORE.md)
 4. **Runbook:** See [OPERATIONAL_RUNBOOK.md](./OPERATIONAL_RUNBOOK.md)

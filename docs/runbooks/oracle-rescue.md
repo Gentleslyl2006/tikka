@@ -3561,27 +3561,27 @@ Quick navigation guide for all Oracle Rescue documentation and source files.
 ## ðŸ“š Start Here
 
 **New to Oracle Rescue?** Start with these:
-1. [RESCUE_COMPLETE.md](./RESCUE_COMPLETE.md) - Overview and quick start
-2. [RESCUE_QUICK_REF.md](./RESCUE_QUICK_REF.md) - Quick reference card
-3. [RESCUE_GUIDE.md](./RESCUE_GUIDE.md) - Comprehensive user guide
+1. [RESCUE_COMPLETE.md](../../oracle/docs/archive/RESCUE_COMPLETE.md) - Overview and quick start
+2. [RESCUE_QUICK_REF.md](../../oracle/README.md#manual-rescue-tool) - Quick reference card
+3. [RESCUE_GUIDE.md](../../oracle/README.md#manual-rescue-tool) - Comprehensive user guide
 
 ## ðŸ“– Documentation
 
 ### User Guides
-- **[RESCUE_GUIDE.md](./RESCUE_GUIDE.md)** - Complete usage guide with examples
+- **[RESCUE_GUIDE.md](../../oracle/README.md#manual-rescue-tool)** - Complete usage guide with examples
   - Architecture overview
   - Usage examples for all commands
   - API usage with curl examples
   - Decision tree for choosing actions
   - Best practices and troubleshooting
 
-- **[RESCUE_QUICK_REF.md](./RESCUE_QUICK_REF.md)** - One-page quick reference
+- **[RESCUE_QUICK_REF.md](../../oracle/README.md#manual-rescue-tool)** - One-page quick reference
   - Emergency commands
   - Decision tree
   - Common scenarios
   - API endpoints
 
-- **[ON_CALL_TROUBLESHOOTING.md](./ON_CALL_TROUBLESHOOTING.md)** - On-call handbook
+- **[ON_CALL_TROUBLESHOOTING.md](../../oracle/docs/ON_CALL_TROUBLESHOOTING.md)** - On-call handbook
   - Quick reference commands
   - Common failure scenarios
   - Escalation matrix
@@ -3589,35 +3589,35 @@ Quick navigation guide for all Oracle Rescue documentation and source files.
   - Contact information
 
 ### Technical Documentation
-- **[RESCUE_IMPLEMENTATION.md](./RESCUE_IMPLEMENTATION.md)** - Technical details
+- **[RESCUE_IMPLEMENTATION.md](../../oracle/src/rescue/README.md)** - Technical details
   - Component descriptions
   - Architecture diagrams
   - Integration details
   - API specifications
   - Future enhancements
 
-- **[RESCUE_FEATURE_SUMMARY.md](./RESCUE_FEATURE_SUMMARY.md)** - Feature overview
+- **[RESCUE_FEATURE_SUMMARY.md](../../oracle/docs/archive/RESCUE_FEATURE_SUMMARY.md)** - Feature overview
   - Problem statement
   - Solution architecture
   - Key features
   - Use cases
   - Success criteria
 
-- **[src/rescue/README.md](./src/rescue/README.md)** - Module documentation
+- **[src/rescue/README.md](../../oracle/src/rescue/README.md)** - Module documentation
   - Quick start
   - File descriptions
   - API endpoints
   - Usage examples
 
 ### Deployment & Operations
-- **[RESCUE_DEPLOYMENT_CHECKLIST.md](./RESCUE_DEPLOYMENT_CHECKLIST.md)** - Deployment guide
+- **[RESCUE_DEPLOYMENT_CHECKLIST.md](../../oracle/docs/archive/RESCUE_DEPLOYMENT_CHECKLIST.md)** - Deployment guide
   - Pre-deployment checklist
   - Deployment steps
   - Post-deployment verification
   - Rollback plan
   - Sign-off template
 
-- **[VERIFICATION_CHECKLIST.md](./VERIFICATION_CHECKLIST.md)** - Completion checklist
+- **[VERIFICATION_CHECKLIST.md](../../oracle/docs/archive/VERIFICATION_CHECKLIST.md)** - Completion checklist
   - Implementation checklist (120 items)
   - Feature completeness
   - Code quality checks
@@ -3625,14 +3625,14 @@ Quick navigation guide for all Oracle Rescue documentation and source files.
   - Deployment readiness
 
 ### Testing & Quality
-- **[TEST_REPORT.md](./TEST_REPORT.md)** - Test results
+- **[TEST_REPORT.md](../../oracle/docs/archive/TEST_REPORT.md)** - Test results
   - Test suite results (9/9 passed)
   - Code quality checks
   - Feature completeness
   - Integration tests
   - Recommendations
 
-- **[RESCUE_COMPLETE.md](./RESCUE_COMPLETE.md)** - Implementation summary
+- **[RESCUE_COMPLETE.md](../../oracle/docs/archive/RESCUE_COMPLETE.md)** - Implementation summary
   - What was built
   - Files created
   - Test results
@@ -3644,12 +3644,12 @@ Quick navigation guide for all Oracle Rescue documentation and source files.
 ### Core Implementation
 Located in `src/rescue/`:
 
-- **[rescue.module.ts](./src/rescue/rescue.module.ts)** - NestJS module
+- **[rescue.module.ts](../../oracle/src/rescue/rescue.module.ts)** - NestJS module
   - Module configuration
   - Dependency injection
   - Service providers
 
-- **[rescue.service.ts](./src/rescue/rescue.service.ts)** - Core business logic
+- **[rescue.service.ts](../../oracle/src/rescue/rescue.service.ts)** - Core business logic
   - `reEnqueueJob()` - Re-enqueue failed jobs
   - `forceSubmit()` - Force submit randomness
   - `forceFail()` - Force fail invalid jobs
@@ -3657,7 +3657,7 @@ Located in `src/rescue/`:
   - `getAllJobs()` - List all jobs
   - `getRescueLogs()` - View audit logs
 
-- **[rescue.controller.ts](./src/rescue/rescue.controller.ts)** - REST API
+- **[rescue.controller.ts](../../oracle/src/rescue/rescue.controller.ts)** - REST API
   - `POST /rescue/re-enqueue`
   - `POST /rescue/force-submit`
   - `POST /rescue/force-fail`
@@ -3665,19 +3665,19 @@ Located in `src/rescue/`:
   - `GET /rescue/jobs`
   - `GET /rescue/logs`
 
-- **[rescue.cli.ts](./src/rescue/rescue.cli.ts)** - CLI interface
+- **[rescue.cli.ts](../../oracle/src/rescue/rescue.cli.ts)** - CLI interface
   - Command parsing
   - User-friendly output
   - Help text
   - Error handling
 
 ### Testing
-- **[rescue.service.spec.ts](./src/rescue/rescue.service.spec.ts)** - Unit tests
+- **[rescue.service.spec.ts](../../oracle/src/rescue/rescue.service.spec.ts)** - Unit tests
   - 15+ test cases
   - All core functionality covered
   - Edge cases tested
 
-- **[test-rescue.js](./test-rescue.js)** - Manual test script
+- **[test-rescue.js](../../oracle/src/rescue/rescue.service.spec.ts)** - Manual test script
   - Automated verification
   - File existence checks
   - Syntax validation
@@ -3740,32 +3740,32 @@ npx tsc --noEmit
 ## ðŸ“‹ Common Tasks
 
 ### For Users
-1. **Learn the basics**: Read [RESCUE_GUIDE.md](./RESCUE_GUIDE.md)
-2. **Quick reference**: Keep [RESCUE_QUICK_REF.md](./RESCUE_QUICK_REF.md) handy
-3. **Troubleshooting**: Check [ON_CALL_TROUBLESHOOTING.md](./ON_CALL_TROUBLESHOOTING.md)
+1. **Learn the basics**: Read [RESCUE_GUIDE.md](../../oracle/README.md#manual-rescue-tool)
+2. **Quick reference**: Keep [RESCUE_QUICK_REF.md](../../oracle/README.md#manual-rescue-tool) handy
+3. **Troubleshooting**: Check [ON_CALL_TROUBLESHOOTING.md](../../oracle/docs/ON_CALL_TROUBLESHOOTING.md)
 
 ### For Developers
-1. **Understand architecture**: Read [RESCUE_IMPLEMENTATION.md](./RESCUE_IMPLEMENTATION.md)
+1. **Understand architecture**: Read [RESCUE_IMPLEMENTATION.md](../../oracle/src/rescue/README.md)
 2. **Review code**: Check files in `src/rescue/`
 3. **Run tests**: Execute `npm test src/rescue/rescue.service.spec.ts`
 
 ### For Operations
-1. **Deploy**: Follow [RESCUE_DEPLOYMENT_CHECKLIST.md](./RESCUE_DEPLOYMENT_CHECKLIST.md)
-2. **On-call**: Use [ON_CALL_TROUBLESHOOTING.md](./ON_CALL_TROUBLESHOOTING.md)
+1. **Deploy**: Follow [RESCUE_DEPLOYMENT_CHECKLIST.md](../../oracle/docs/archive/RESCUE_DEPLOYMENT_CHECKLIST.md)
+2. **On-call**: Use [ON_CALL_TROUBLESHOOTING.md](../../oracle/docs/ON_CALL_TROUBLESHOOTING.md)
 3. **Monitor**: Set up alerts from deployment guide
 
 ## ðŸ” Find What You Need
 
 ### I want to...
-- **Learn how to use the tool** â†’ [RESCUE_GUIDE.md](./RESCUE_GUIDE.md)
-- **Get a quick command reference** â†’ [RESCUE_QUICK_REF.md](./RESCUE_QUICK_REF.md)
-- **Troubleshoot an issue** â†’ [ON_CALL_TROUBLESHOOTING.md](./ON_CALL_TROUBLESHOOTING.md)
-- **Understand the architecture** â†’ [RESCUE_IMPLEMENTATION.md](./RESCUE_IMPLEMENTATION.md)
-- **Deploy to production** â†’ [RESCUE_DEPLOYMENT_CHECKLIST.md](./RESCUE_DEPLOYMENT_CHECKLIST.md)
-- **Review test results** â†’ [TEST_REPORT.md](./TEST_REPORT.md)
-- **Check implementation status** â†’ [VERIFICATION_CHECKLIST.md](./VERIFICATION_CHECKLIST.md)
-- **See what was built** â†’ [RESCUE_COMPLETE.md](./RESCUE_COMPLETE.md)
-- **Understand features** â†’ [RESCUE_FEATURE_SUMMARY.md](./RESCUE_FEATURE_SUMMARY.md)
+- **Learn how to use the tool** â†’ [RESCUE_GUIDE.md](../../oracle/README.md#manual-rescue-tool)
+- **Get a quick command reference** â†’ [RESCUE_QUICK_REF.md](../../oracle/README.md#manual-rescue-tool)
+- **Troubleshoot an issue** â†’ [ON_CALL_TROUBLESHOOTING.md](../../oracle/docs/ON_CALL_TROUBLESHOOTING.md)
+- **Understand the architecture** â†’ [RESCUE_IMPLEMENTATION.md](../../oracle/src/rescue/README.md)
+- **Deploy to production** â†’ [RESCUE_DEPLOYMENT_CHECKLIST.md](../../oracle/docs/archive/RESCUE_DEPLOYMENT_CHECKLIST.md)
+- **Review test results** â†’ [TEST_REPORT.md](../../oracle/docs/archive/TEST_REPORT.md)
+- **Check implementation status** â†’ [VERIFICATION_CHECKLIST.md](../../oracle/docs/archive/VERIFICATION_CHECKLIST.md)
+- **See what was built** â†’ [RESCUE_COMPLETE.md](../../oracle/docs/archive/RESCUE_COMPLETE.md)
+- **Understand features** â†’ [RESCUE_FEATURE_SUMMARY.md](../../oracle/docs/archive/RESCUE_FEATURE_SUMMARY.md)
 - **Review the code** â†’ `src/rescue/*.ts`
 
 ## ðŸ“Š File Statistics
@@ -3794,35 +3794,35 @@ npx tsc --noEmit
 ## ðŸŽ¯ By Role
 
 ### On-Call Engineer
-1. [RESCUE_QUICK_REF.md](./RESCUE_QUICK_REF.md) - Keep this open
-2. [ON_CALL_TROUBLESHOOTING.md](./ON_CALL_TROUBLESHOOTING.md) - Your handbook
-3. [RESCUE_GUIDE.md](./RESCUE_GUIDE.md) - Detailed reference
+1. [RESCUE_QUICK_REF.md](../../oracle/README.md#manual-rescue-tool) - Keep this open
+2. [ON_CALL_TROUBLESHOOTING.md](../../oracle/docs/ON_CALL_TROUBLESHOOTING.md) - Your handbook
+3. [RESCUE_GUIDE.md](../../oracle/README.md#manual-rescue-tool) - Detailed reference
 
 ### Developer
-1. [RESCUE_IMPLEMENTATION.md](./RESCUE_IMPLEMENTATION.md) - Architecture
-2. [src/rescue/README.md](./src/rescue/README.md) - Module docs
+1. [RESCUE_IMPLEMENTATION.md](../../oracle/src/rescue/README.md) - Architecture
+2. [src/rescue/README.md](../../oracle/src/rescue/README.md) - Module docs
 3. Source files in `src/rescue/` - Code
 
 ### DevOps Engineer
-1. [RESCUE_DEPLOYMENT_CHECKLIST.md](./RESCUE_DEPLOYMENT_CHECKLIST.md) - Deploy
-2. [VERIFICATION_CHECKLIST.md](./VERIFICATION_CHECKLIST.md) - Verify
-3. [TEST_REPORT.md](./TEST_REPORT.md) - Test results
+1. [RESCUE_DEPLOYMENT_CHECKLIST.md](../../oracle/docs/archive/RESCUE_DEPLOYMENT_CHECKLIST.md) - Deploy
+2. [VERIFICATION_CHECKLIST.md](../../oracle/docs/archive/VERIFICATION_CHECKLIST.md) - Verify
+3. [TEST_REPORT.md](../../oracle/docs/archive/TEST_REPORT.md) - Test results
 
 ### Product Manager
-1. [RESCUE_COMPLETE.md](./RESCUE_COMPLETE.md) - Overview
-2. [RESCUE_FEATURE_SUMMARY.md](./RESCUE_FEATURE_SUMMARY.md) - Features
-3. [TEST_REPORT.md](./TEST_REPORT.md) - Quality
+1. [RESCUE_COMPLETE.md](../../oracle/docs/archive/RESCUE_COMPLETE.md) - Overview
+2. [RESCUE_FEATURE_SUMMARY.md](../../oracle/docs/archive/RESCUE_FEATURE_SUMMARY.md) - Features
+3. [TEST_REPORT.md](../../oracle/docs/archive/TEST_REPORT.md) - Quality
 
 ## ðŸ”— Related Documentation
 
 ### Oracle Service
-- [README.md](./README.md) - Oracle service overview
-- [COMMIT_REVEAL.md](./COMMIT_REVEAL.md) - Commit-reveal pattern
-- [MULTI_ORACLE.md](./MULTI_ORACLE.md) - Multi-oracle setup
+- [README.md](../../oracle/README.md) - Oracle service overview
+- [COMMIT_REVEAL.md](../../oracle/docs/COMMIT_REVEAL.md) - Commit-reveal pattern
+- [MULTI_ORACLE.md](../../oracle/docs/MULTI_ORACLE.md) - Multi-oracle setup
 
 ### Project Root
 - [../README.md](../README.md) - Project overview
-- [../docs/testing/notifications-quick-start.md](../docs/testing/notifications-quick-start.md) - Getting started
+- [../docs/testing/notifications-quick-start.md](../testing/notifications-quick-start.md) - Getting started
 
 ## ðŸ“ž Support
 
@@ -3834,15 +3834,15 @@ If you find issues with documentation:
 
 ### Code Issues
 If you find issues with code:
-1. Review [RESCUE_IMPLEMENTATION.md](./RESCUE_IMPLEMENTATION.md)
+1. Review [RESCUE_IMPLEMENTATION.md](../../oracle/src/rescue/README.md)
 2. Check source files in `src/rescue/`
 3. Run tests: `npm test src/rescue/rescue.service.spec.ts`
 4. Report issues to the team
 
 ### Operational Issues
 If you encounter operational issues:
-1. Check [ON_CALL_TROUBLESHOOTING.md](./ON_CALL_TROUBLESHOOTING.md)
-2. Review [RESCUE_GUIDE.md](./RESCUE_GUIDE.md)
+1. Check [ON_CALL_TROUBLESHOOTING.md](../../oracle/docs/ON_CALL_TROUBLESHOOTING.md)
+2. Review [RESCUE_GUIDE.md](../../oracle/README.md#manual-rescue-tool)
 3. Escalate per escalation matrix
 
 ---

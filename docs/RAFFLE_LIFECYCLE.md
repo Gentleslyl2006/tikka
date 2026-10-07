@@ -651,7 +651,7 @@ Indexer            Backend (Leaderboard Service)    Supabase DB    WebSocket/API
 ### Integration Tests
 
 - **Contract**: `tikka-contracts/tests/`
-- **E2E**: [oracle/E2E_TEST_GUIDE.md](../oracle/E2E_TEST_GUIDE.md)
+- **E2E**: [oracle/E2E_TEST_GUIDE.md](../oracle/docs/E2E_TEST_GUIDE.md)
 
 ### Verification Checklist
 

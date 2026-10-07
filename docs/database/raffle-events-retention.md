@@ -204,8 +204,8 @@ Optional code override: `outDir` in `ArchiveOptions` (CLI uses `./archives` unde
 
 ## Further reading
 
-- Operator guide: [`indexer/src/maintenance/ARCHIVE_RAFFLE_EVENTS_GUIDE.md`](../../indexer/src/maintenance/ARCHIVE_RAFFLE_EVENTS_GUIDE.md)
-- Quick commands: [`indexer/src/maintenance/ARCHIVE_QUICK_REF.md`](../../indexer/src/maintenance/ARCHIVE_QUICK_REF.md)
+- Operator guide: [Archive guide](../indexer/ARCHIVE_RAFFLE_EVENTS_GUIDE.md)
+- Quick commands: [Archive quick reference](../indexer/ARCHIVE_QUICK_REF.md)
 - Archive runbook: [`docs/runbooks/archive-raffle-events.md`](../runbooks/archive-raffle-events.md)
 - Restore runbook: [`docs/runbooks/restore-raffle-events.md`](../runbooks/restore-raffle-events.md)
 - Indexer README maintenance section: [`indexer/README.md`](../../indexer/README.md)

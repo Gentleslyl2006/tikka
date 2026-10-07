@@ -1,0 +1,34 @@
+name: Documentation links
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: '0 8 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  internal:
+    name: Check internal Markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Check relative links and anchors
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
+        with:
+          args: --offline --include-fragments --exclude-path '(^|.*[/\\])docs[/\\]archive([/\\].*)?$' './**/*.md'
+
+  external:
+    name: Check external Markdown links
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - name: Check external URLs and anchors
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
+        with:
+          args: --include-fragments --exclude-path '(^|.*[/\\])docs[/\\]archive([/\\].*)?$' './**/*.md'

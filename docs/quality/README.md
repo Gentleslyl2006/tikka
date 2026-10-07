@@ -91,4 +91,4 @@ Together, we maintain excellence. 🌊
 **Related Resources:**
 - [Tikka Architecture](../ARCHITECTURE.md) — Ecosystem design and data flows
 - [Tikka README](../../README.md) — Project overview and setup
-- [GitHub Workflows](.github/workflows/) — CI/CD configuration
+- [GitHub Workflows](../../.github/workflows/) — CI/CD configuration

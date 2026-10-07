@@ -7,7 +7,7 @@ This document provides detailed procedures for restoring Postgres and Redis stat
 - [Prerequisites](#prerequisites)
 - [Full Platform Restore](#full-platform-restore)
 - [Service-Specific Restore Procedures](#service-specific-restore-procedures)
-- [Point-in-Time Recovery](#point-in-time-recovery)
+- [Point-in-Time Recovery](#point-in-time-recovery-pitr)
 - [Partial Data Recovery](#partial-data-recovery)
 - [Replay and Rebuild Scenarios](#replay-and-rebuild-scenarios)
 - [Post-Restore Validation](#post-restore-validation)
@@ -596,7 +596,7 @@ psql "$INDEXER_DB_URL" -c "SELECT COUNT(*) FROM raffle;" || exit 1
 echo "[$(date)] ✅ All validation checks passed"
 ```
 
-**Continue to:** [VALIDATION_CHECKLIST.md](./VALIDATION_CHECKLIST.md)
+**Continue to:** [Test the restore](./TEST_RESTORE.md)
 
 ---
 
@@ -653,4 +653,4 @@ pg_restore --no-owner ...
 - [ ] Team is notified of maintenance window
 
 ### After Restore
-- [ ] See [VALIDATION_CHECKLIST.md](./VALIDATION_CHECKLIST.md)
+- [ ] See [TEST_RESTORE.md](./TEST_RESTORE.md)

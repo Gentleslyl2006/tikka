@@ -27,7 +27,7 @@ Ready to migrate to production?
    - Rollback procedures
    - Post-migration monitoring
 
-4. **[Deployment Checklist](./HSM_DEPLOYMENT_CHECKLIST.md)** (Reference)
+4. **[Deployment Checklist](./archive/HSM_DEPLOYMENT_CHECKLIST.md)** (Reference)
    - Pre-deployment tasks
    - Deployment steps
    - Verification procedures
@@ -37,7 +37,7 @@ Ready to migrate to production?
 
 For developers and architects:
 
-5. **[Implementation Summary](./HSM_IMPLEMENTATION_SUMMARY.md)** (15 minutes)
+5. **[Implementation Summary](./archive/HSM_IMPLEMENTATION_SUMMARY.md)** (15 minutes)
    - Architecture overview
    - Component structure
    - Code changes
@@ -133,12 +133,12 @@ Common issues and solutions:
 
 1. Read [Quick Start](./KEY_MANAGEMENT_QUICK_START.md)
 2. Review [Migration Guide](./MIGRATION_TO_HSM.md)
-3. Use [Deployment Checklist](./HSM_DEPLOYMENT_CHECKLIST.md)
+3. Use [Deployment Checklist](./archive/HSM_DEPLOYMENT_CHECKLIST.md)
 4. Bookmark [Troubleshooting](./KEY_MANAGEMENT.md#troubleshooting)
 
 ### For Developers
 
-1. Read [Implementation Summary](./HSM_IMPLEMENTATION_SUMMARY.md)
+1. Read [Implementation Summary](./archive/HSM_IMPLEMENTATION_SUMMARY.md)
 2. Review code in `oracle/src/keys/`
 3. Study [Kubernetes Examples](../k8s/examples/)
 4. Run tests: `npm test`
@@ -146,8 +146,8 @@ Common issues and solutions:
 ### For Architects
 
 1. Read [Comprehensive Guide](./KEY_MANAGEMENT.md)
-2. Review [Implementation Summary](./HSM_IMPLEMENTATION_SUMMARY.md)
-3. Evaluate [Performance Impact](./HSM_IMPLEMENTATION_SUMMARY.md#performance-impact)
+2. Review [Implementation Summary](./archive/HSM_IMPLEMENTATION_SUMMARY.md)
+3. Evaluate [Performance Impact](./archive/HSM_IMPLEMENTATION_SUMMARY.md#performance-impact)
 4. Plan [Migration Strategy](./MIGRATION_TO_HSM.md)
 
 ## 🔗 External Resources

@@ -1,4 +1,4 @@
-# Soroban Contract Integration Boundary
+﻿# Soroban Contract Integration Boundary
 
 > **Scope:** External Soroban contracts for the Tikka raffle platform  
 > **Audience:** SDK, indexer, oracle, backend, and client developers  
@@ -497,7 +497,7 @@ This section links the contract to specific code locations that depend on it.
 
 - If event fields change, update the corresponding handler's `parse()` method
 - If new events added, create new handler class and register in registry
-- See [`indexer/src/ingestor/EVENT_PARSER.md`](../../indexer/src/ingestor/EVENT_PARSER.md)
+- See [Event Parser Extensibility](../../indexer/docs/EVENT_PARSER_EXTENSIBILITY.md)
 
 ### Oracle Event Listener
 
@@ -513,7 +513,7 @@ This section links the contract to specific code locations that depend on it.
 
 ### Backend Contract Integration
 
-**Location:** [`backend/src/contract/`](../../backend/src/contract/)
+**Location:** [`sdk/src/contract/`](../../sdk/src/contract/)
 
 - Metadata storage (raffle name, description, image URL)
 - Tracks on-chain state without redundancy
@@ -526,12 +526,13 @@ This section links the contract to specific code locations that depend on it.
 
 ### Client Contract Integration
 
-**Location:** [`client/src/config/contract.ts`](../../client/src/config/contract.ts)  
-**Hooks:** [`client/src/hooks/useContract.ts`](../../client/src/hooks/useContract.ts)
+**Configuration:** [`client/src/config/contract.ts`](../../client/src/config/contract.ts)
 
-- Stores contract address and method names
-- `useContract()` hook wraps SDK calls
-- Displays contract state in UI (status, ticket count, prize, etc.)
+**Entry flow:** [`client/src/hooks/useEnterRaffle.ts`](../../client/src/hooks/useEnterRaffle.ts)
+
+- `CONTRACT_CONFIG` stores the configured contract address and method names
+- `useEnterRaffle` handles wallet readiness and initiates ticket purchases
+- The raffle page displays contract-backed raffle state and purchase status
 
 **On Contract Update:**
 
@@ -644,7 +645,7 @@ If all pass, contract upgrade is safe.
 - **[CONTRACT_UPGRADE_CHECKLIST.md](./CONTRACT_UPGRADE_CHECKLIST.md)** â€” Step-by-step upgrade guide
 - **[SCHEMA_VERIFICATION.md](./SCHEMA_VERIFICATION.md)** â€” How to verify contract data compatibility
 - **[ARCHITECTURE.md](../ARCHITECTURE.md)** â€” System-wide architecture (section 1: tikka-contracts)
-- **[EVENT_PARSER.md](../../indexer/src/ingestor/EVENT_PARSER.md)** â€” How indexer parses events
+- **[EVENT_PARSER.md](../../indexer/docs/EVENT_PARSER_EXTENSIBILITY.md)** â€” How indexer parses events
 - **[SDK README](../../sdk/README.md)** â€” SDK usage guide
 - **[Stellar Soroban Docs](https://developers.stellar.org/learn/smart-contracts)** â€” Official Soroban reference
 

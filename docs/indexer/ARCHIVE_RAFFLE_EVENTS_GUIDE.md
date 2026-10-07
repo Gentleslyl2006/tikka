@@ -68,7 +68,7 @@ CONFIRM_DELETE=yes DRY_RUN=false npm run archive:raffle-events
 ```
 
 Destructive runs refuse to start unless deletion is confirmed. See
-[`docs/database/raffle-events-retention.md`](../../../docs/database/raffle-events-retention.md).
+[`docs/database/raffle-events-retention.md`](../database/raffle-events-retention.md).
 
 ### Configuration Options
 
@@ -441,7 +441,7 @@ Behaviour:
 - **Legacy compatible** — eight-column archives (pre-`contract_address`) import
   with `contract_address = NULL`.
 
-Full operator procedure: [`docs/runbooks/restore-raffle-events.md`](../../../docs/runbooks/restore-raffle-events.md).
+Full operator procedure: [`docs/runbooks/restore-raffle-events.md`](../runbooks/restore-raffle-events.md).
 
 ## Integration with Backup Systems
 
@@ -519,7 +519,7 @@ A: The second run will wait for the first to complete (row-level lock on checkpo
 A: Yes, but it will create a new checkpoint and start fresh.
 
 **Q: How do I restore archived data?**  
-A: `DRY_RUN=false npm run restore:raffle-events` — the CLI verifies each `.sha256` sidecar, parses strictly, and inserts with `ON CONFLICT (tx_hash) DO NOTHING`. Full procedure in [`docs/runbooks/restore-raffle-events.md`](../../../docs/runbooks/restore-raffle-events.md).
+A: `DRY_RUN=false npm run restore:raffle-events` — the CLI verifies each `.sha256` sidecar, parses strictly, and inserts with `ON CONFLICT (tx_hash) DO NOTHING`. Full procedure in [`docs/runbooks/restore-raffle-events.md`](../runbooks/restore-raffle-events.md).
 
 **Q: A restore reported a checksum mismatch. Can I just re-generate the sidecar?**  
 A: No. The sidecar is how we know the bytes are the ones we archived. Re-download the CSV **and** its sidecar from durable storage (or restore both from backup) and investigate why the file changed before re-running.
@@ -532,15 +532,15 @@ A: Not currently, but you can pipe CSV output to S3 upload in a wrapper script �
 
 ## References
 
-- [Production Runbook](../../../docs/runbooks/archive-raffle-events.md)
-- [Restore Runbook](../../../docs/runbooks/restore-raffle-events.md)
-- [Retention Policy & Restore Notes](../../../docs/database/raffle-events-retention.md)
-- [Archive Checkpoint Entity](../database/entities/archive-checkpoint.entity.ts)
-- [Raffle Event Entity](../database/entities/raffle-event.entity.ts)
-- [CLI Entry Point](./archive-raffle-events.ts)
-- [Restore CLI Entry Point](./restore-raffle-events.ts)
-- [Archiver Modules](./archive)
-- [Entry-Point Contract Test](./archive-raffle-events.spec.ts)
+- [Production Runbook](../runbooks/archive-raffle-events.md)
+- [Restore Runbook](../runbooks/restore-raffle-events.md)
+- [Retention Policy & Restore Notes](../database/raffle-events-retention.md)
+- [Archive Checkpoint Entity](../../indexer/src/database/entities/archive-checkpoint.entity.ts)
+- [Raffle Event Entity](../../indexer/src/database/entities/raffle-event.entity.ts)
+- [CLI Entry Point](../../indexer/src/maintenance/archive-raffle-events.ts)
+- [Restore CLI Entry Point](../../indexer/src/maintenance/restore-raffle-events.ts)
+- [Maintenance Module](../../indexer/src/maintenance/maintenance.module.ts)
+- [Entry-Point Contract Test](../../indexer/src/maintenance/archive-raffle-events.spec.ts)
 
 ## Support
 

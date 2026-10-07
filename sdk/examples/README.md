@@ -9,7 +9,7 @@ This directory contains runnable examples demonstrating common workflows with th
    cp .env.example .env
    ```
 
-2. **Fill in your configuration** (see [Environment Variables](#environment-variables) below)
+2. **Fill in your configuration** (see [Environment Variables Reference](#environment-variables-reference) below)
 
 3. **Run an example** using `npm run` from the SDK root:
    ```bash
@@ -213,7 +213,7 @@ npm run example:custom-wallet
 
 **Notes:**
 - Runs in Node — no browser extension required
-- Full integrator contract: [`../WALLET_ADAPTER.md`](../WALLET_ADAPTER.md)
+- Full integrator contract: [`Wallet adapters`](../../docs/WALLET_ADAPTERS.md)
 
 ---
 

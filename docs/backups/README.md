@@ -9,7 +9,7 @@ This directory contains comprehensive backup and restore procedures for Tikka se
 - **🚀 [Setup automated backups](./BACKUP_PROCEDURES.md#automated-backup-scheduling)** — Schedule daily/weekly backups
 - **💾 [Backup now](./BACKUP_PROCEDURES.md#service-specific-backup-procedures)** — Create an immediate backup
 - **🔄 [Restore from backup](./RESTORE_PROCEDURES.md)** — Recover lost or corrupted data
-- **✅ [Validate after restore](./VALIDATION_CHECKLIST.md)** — Verify restore success
+- **✅ [Test a restore](./TEST_RESTORE.md)** — Verify backups can be restored
 - **🚨 [Incident response](./OPERATIONAL_RUNBOOK.md)** — Handle service outages and emergencies
 
 ## Documentation Overview
@@ -18,7 +18,7 @@ This directory contains comprehensive backup and restore procedures for Tikka se
 |-----------|---------|----------|
 | **[BACKUP_PROCEDURES.md](./BACKUP_PROCEDURES.md)** | Detailed backup methods, service-specific scripts, automation setup | DevOps, SRE, On-Call Engineers |
 | **[RESTORE_PROCEDURES.md](./RESTORE_PROCEDURES.md)** | Step-by-step restore for different failure scenarios | DevOps, SRE, On-Call Engineers |
-| **[VALIDATION_CHECKLIST.md](./VALIDATION_CHECKLIST.md)** | Post-restore validation and health checks | QA, On-Call Engineers |
+| **[TEST_RESTORE.md](./TEST_RESTORE.md)** | Verify backups can be restored and data is accessible | QA, On-Call Engineers |
 | **[OPERATIONAL_RUNBOOK.md](./OPERATIONAL_RUNBOOK.md)** | Common issues, decision trees, incident response | On-Call Engineers, Tech Leads |
 | **[tikka-backup.sh](./tikka-backup.sh)** | Automated backup script (executable) | DevOps Automation |
 | **[tikka-restore.sh](./tikka-restore.sh)** | Automated restore script (executable) | DevOps Automation |
@@ -256,7 +256,7 @@ source backup.env
 4. Report results to your on-call lead
 
 **Validate after restore:**
-1. Follow [VALIDATION_CHECKLIST.md](./VALIDATION_CHECKLIST.md)
+1. Follow [TEST_RESTORE.md](./TEST_RESTORE.md)
 2. Run each verification in order
 3. Document any failures
 4. Escalate if any critical checks fail

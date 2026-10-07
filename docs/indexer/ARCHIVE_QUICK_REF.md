@@ -70,7 +70,7 @@ ARCHIVE_DIR=/mnt/backups/raffle-events DRY_RUN=false npm run restore:raffle-even
 
 A missing or mismatched sidecar aborts the run — never delete or hand-edit a
 `.sha256` file to force an import. Full procedure:
-[`docs/runbooks/restore-raffle-events.md`](../../../docs/runbooks/restore-raffle-events.md).
+[`docs/runbooks/restore-raffle-events.md`](../runbooks/restore-raffle-events.md).
 
 ## Monitoring
 
@@ -117,7 +117,7 @@ psql -c "SELECT * FROM archive_checkpoints WHERE job_type='raffle_events' ORDER 
 
 ## Full Documentation
 
-- Runbook (production): [`docs/runbooks/archive-raffle-events.md`](../../../docs/runbooks/archive-raffle-events.md)
-- Restore runbook: [`docs/runbooks/restore-raffle-events.md`](../../../docs/runbooks/restore-raffle-events.md)
-- Retention / restore (ops): [`docs/database/raffle-events-retention.md`](../../../docs/database/raffle-events-retention.md)
+- Runbook (production): [`docs/runbooks/archive-raffle-events.md`](../runbooks/archive-raffle-events.md)
+- Restore runbook: [`docs/runbooks/restore-raffle-events.md`](../runbooks/restore-raffle-events.md)
+- Retention / restore (ops): [`docs/database/raffle-events-retention.md`](../database/raffle-events-retention.md)
 - Guide: [ARCHIVE_RAFFLE_EVENTS_GUIDE.md](./ARCHIVE_RAFFLE_EVENTS_GUIDE.md)

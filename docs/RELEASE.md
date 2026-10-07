@@ -147,7 +147,7 @@ cd sdk && npm publish
 ### SDK Release (Manual)
 
 1. Update version in `sdk/package.json`
-2. Add entry to `CHANGELOG.md` using the [SDK section template](../sdk/DEPRECATION.md#sdk-changelog-section-template) (also summarized below)
+2. Add entry to `CHANGELOG.md` using the [SDK section template](../sdk/DEPRECATION.md) (also summarized below)
 3. Confirm deprecations/removals follow [sdk/DEPRECATION.md](../sdk/DEPRECATION.md)
 4. Tag commit: `sdk-v0.1.0`
 5. Publish to npm: `npm publish` (from `sdk/` directory)

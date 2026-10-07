@@ -251,9 +251,9 @@ Jobs that crash the handler repeatedly (poison messages) or fail with non-retria
 
 ## Documentation
 
-- [Full Implementation Guide](../../QUEUE_STATE_MACHINE_IMPLEMENTATION.md)
-- [Quick Reference](../../QUEUE_STATE_MACHINE_QUICK_REF.md)
-- [Summary](../../QUEUE_STATE_MACHINE_SUMMARY.md)
+- [Full Implementation Guide](../../docs/archive/2026-08-28-oracle-QUEUE_STATE_MACHINE_IMPLEMENTATION.md)
+- [Quick Reference](../../docs/QUEUE_STATE_MACHINE_QUICK_REF.md)
+- [Summary](../../docs/archive/QUEUE_STATE_MACHINE_SUMMARY.md)
 
 ## License
 
