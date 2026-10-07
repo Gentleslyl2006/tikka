@@ -81,7 +81,9 @@ const mockFormattedRaffle: FormattedRaffle = {
  */
 const createWrapper = () => {
     const queryClient = new QueryClient({
-        defaultOptions: { queries: { retry: false } },
+        defaultOptions: {
+            queries: { retry: false, refetchOnWindowFocus: false },
+        },
     });
     const wrapper = ({ children }: { children?: ReactNode }) => (
         <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
@@ -118,6 +120,23 @@ describe("useRafflePageData", () => {
             expect(result.current.data.raffle).toEqual(mockFormattedRaffle);
         }
         expect(raffleService.fetchRaffleDetail).toHaveBeenCalledWith(1337);
+    });
+
+    it("refetches the raffle detail when the window receives focus", async () => {
+        vi.spyOn(raffleService, "fetchRaffleDetail").mockResolvedValue(mockRaffleDetail);
+        vi.spyOn(raffleService, "mapDetailToFormattedRaffle").mockReturnValue(mockFormattedRaffle);
+
+        const { wrapper } = createWrapper();
+        const { result } = renderHook(() => useRafflePageData(1337), { wrapper });
+
+        await waitFor(() => expect(result.current.data.status).toBe("ready"));
+        expect(raffleService.fetchRaffleDetail).toHaveBeenCalledTimes(1);
+
+        act(() => {
+            window.dispatchEvent(new Event("focus"));
+        });
+
+        await waitFor(() => expect(raffleService.fetchRaffleDetail).toHaveBeenCalledTimes(2));
     });
 
     it("surfaces the error and drops into the error union member when the fetch fails", async () => {

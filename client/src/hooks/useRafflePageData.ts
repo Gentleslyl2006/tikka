@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useRaffle } from "./useRaffles";
 import { useBuyTicketsMutation } from "./useRaffleMutations";
 import type { FormattedRaffle } from "../types/raffle";
@@ -33,6 +34,14 @@ export interface UseRafflePageDataReturn {
 export const useRafflePageData = (raffleId: number): UseRafflePageDataReturn => {
     const { raffle, error, isLoading, refetch } = useRaffle(raffleId);
     const purchaseTickets = useBuyTicketsMutation();
+
+    useEffect(() => {
+        const handleFocus = () => {
+            void refetch();
+        };
+        window.addEventListener("focus", handleFocus);
+        return () => window.removeEventListener("focus", handleFocus);
+    }, [refetch]);
 
     let data: RafflePageData;
     if (isLoading) {

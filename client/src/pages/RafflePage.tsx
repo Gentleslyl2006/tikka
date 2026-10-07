@@ -1,7 +1,8 @@
 import { logger } from '../utils/logger';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { toast } from 'sonner';
+import confetti from 'canvas-confetti';
 import { useAuth } from '../hooks/useAuth';
 import { useRafflePageData } from '../hooks/useRafflePageData';
 import { ProgressBar } from '../components/ui/ProgressBar';
@@ -30,9 +31,45 @@ const RafflePage = () => {
   const { address } = useAuth();
   const [ticketCount, setTicketCount] = useState(1);
   const recentParticipantsRef = useRef<RecentParticipantsHandle>(null);
+  const hasCelebrated = useRef(false);
 
   const raffleId = id ? parseInt(id) : 0;
   const { data, purchaseTickets } = useRafflePageData(raffleId);
+  const winner = data.status === 'ready' ? data.raffle.winner : null;
+
+  useEffect(() => {
+    if (!winner || address !== winner || hasCelebrated.current) return;
+
+    const duration = 3 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+    const randomInRange = (min: number, max: number) =>
+      Math.random() * (max - min) + min;
+
+    const interval = window.setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        window.clearInterval(interval);
+        return;
+      }
+
+      const particleCount = 50 * (timeLeft / duration);
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
+    }, 250);
+
+    hasCelebrated.current = true;
+    return () => window.clearInterval(interval);
+  }, [address, winner]);
 
   const handleIncrement = () => setTicketCount((c) => Math.min(c + 1, 100));
   const handleDecrement = () => setTicketCount((c) => Math.max(c - 1, 1));
